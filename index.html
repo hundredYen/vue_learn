@@ -6,6 +6,22 @@
 		<script src="./vue3.js"></script>
 	</head>
 	<body>
+		<div id="counter">
+			<p>{{num}}</p>
+			<p>{{uname}}</p>
+		</div>
 		
+		<script>
+			const Counter = { //配置对象
+				data:function(){
+					return{
+						num:0,
+						uname:"秦文杰"
+					}
+				}
+			}
+			let myapp = Vue.createApp(Counter).mount('#counter') //创建应用，将配置对象传入 mount进行挂在，和指定元素相关联
+			console.log(myapp) 
+		</script>
 	</body>
 </html>
