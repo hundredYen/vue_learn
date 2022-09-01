@@ -18,6 +18,11 @@
 						num:0,
 						uname:"秦文杰"
 					}
+				},
+				mounted(){
+					setInterval(()=>{
+						this.num ++
+					},1000)
 				}
 			}
 			let myapp = Vue.createApp(Counter).mount('#counter') //创建应用，将配置对象传入 mount进行挂在，和指定元素相关联
